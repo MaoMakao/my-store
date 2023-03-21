@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-black text-white overflow-x-hidden;
+}
+a{
+    @apply !text-inherit hover:!text-inherit
+}
+
+.active {
+    @apply bg-green-900 hover:bg-green-800;
+}
+
+@media (max-width: 900px) {
+    .active {
+        @apply text-green-500 bg-transparent hover:bg-transparent;
+    }
+}
