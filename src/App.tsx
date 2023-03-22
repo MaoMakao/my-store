@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import ItemList from "./components/ItemList/ItemList";
+import Cart from "./components/Cart/Cart";
+// import { useDispatch } from "react-redux";
+// import { getData } from "./redux/actions/getDataActions";
+// import { ThunkDispatch } from "@reduxjs/toolkit";
+// import { RootState } from "./redux";
 
 function App() {
+  // const dispatch: ThunkDispatch<RootState, unknown, any> = useDispatch();
+
+  // useEffect(() => {
+  //   dispatch(getData());
+  // }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<ItemList />} />
+        <Route path="/cart" element={<Cart />} />
+      </Route>
+    </Routes>
   );
 }
 
