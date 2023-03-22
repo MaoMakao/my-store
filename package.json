@@ -1,6 +1,7 @@
 {
   "name": "my-store",
   "version": "0.1.0",
+  "homepage": "https://maomakao.github.io/my-store",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.3",
